@@ -1,0 +1,314 @@
+/* Start variables */
+:root{
+    --mainColor : #5e2985;
+    --secondColor: #141414;
+    --mainColorLight: #d72d9c;
+    --mainColorDark: #23002e ;
+    --logoSize : 20px;
+    --light-box: #322e32;
+    --dark-box: #282828;
+    --light-gery: #bdbdbd;
+}
+/* End variables */
+/* Start global rules */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+     box-sizing: border-box;
+     transition: all 0.5;
+}
+body{
+    font-family: 'Oswald', sans-serif;
+    margin: 0px;
+}
+img{
+    width:100%;
+    height: 100%;
+}
+p{
+    line-height: 25px;
+}
+a{
+    text-decoration: none;
+}
+/* Start Global Classes */
+.container{
+    width: 600px;
+    max-width: 100%;
+    padding: 100px 15px;
+    margin-right: auto;
+    margin-left: auto;
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+}
+.row{
+    display: grid;
+    grid-gap: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-rows: 1fr;
+} 
+.bg-black{
+    color: #fff;
+    background-color: black;
+}
+.grad-dark {
+    background-image: linear-gradient(to left top, #000, var(--mainColorDark));
+}
+.grad-light{
+    background-image: linear-gradient(to right bottom, var(--mainColor), var(--mainColorLight));
+}
+
+.pt{
+    padding-top: 50px;
+}
+.pb{
+    padding-bottom:50px;
+}
+.mt-0{
+    margin-top: 0;
+}
+.pt-0{
+    padding-top: 0;
+}
+.text-light{
+    color: #fff;;
+}
+.text-center{
+    text-align: center;
+}
+.list-style-none{
+list-style: none;
+}
+.nav-item{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.main-botton{
+    border: none;
+    padding: 15px 50px;
+    margin-top: 42px;
+    color: #fff;
+    border-radius: 5px;
+}
+.justify-space-between{
+    display: flex;
+    justify-content: space-between;
+}
+.margin-auto-0{
+    margin: auto 0;
+}
+
+/* End Global Classes */
+/* End global rules */
+/* Start Header */
+.header{
+    position: fixed;
+    top: 0;
+    width:100%;
+    background-color: #fff;
+}
+.header .header-container{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+    padding: 25px 40px;
+}
+.header .logo a{
+    margin: 16px 0;
+    font-size: var(--logoSize);
+    text-decoration: none;
+    font-weight: bolder;
+    color: var(--mainColor);
+}
+.header .logo i{
+    padding-right: 3px; 
+}
+.header .icons .list-icon{
+    width: 30px;
+    display: none;
+    /* display: flex; 
+    flex-wrap: wrap;
+    justify-content: flex-end;*/
+}
+.header .icons .list-icon:hover span:nth-child(2){
+    width:100%;
+}
+.header .icons .list-icon span{
+    background-color: var(--secondColor);
+    margin-bottom: 5px;
+    height: 3px;
+}
+.header .icons .list-icon span:first-child{
+    width:100%
+}
+.header .icons .list-icon span:nth-child(2){
+    width:60%;
+    transition: .3s;
+}
+.header .icons .list-icon span:last-child{
+    width:100%
+}
+.header .nav-list{
+    list-style: none;
+}
+.header .nav-list li{
+    display: inline-block;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.header .nav-list li a{
+    text-decoration: none;
+    color: var(--secondColor);
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+.header .nav-list li a:hover{
+    color: var(--mainColor);
+    border-bottom: 1px solid var(--mainColor);
+}
+/* End Header */
+/* Start Introduction */
+.introduction{
+    margin-top: 60px;
+}
+.introduction .intro-des{
+    padding:25px;
+}
+.introduction .intro-des h1{
+    font-size: 2.5em;
+}
+.introduction .socials{
+    margin-top:50px;
+ }
+.introduction .socials span:first-child{
+    margin-right:10px;
+}
+.introduction .socials span:nth-child(2) a{
+    margin-left: 10px;
+}
+
+.introduction .intro-des button{
+    border: none;
+    padding: 15px 50px;
+    margin-top: 42px;
+    color: #fff;
+    border-radius: 5px;
+}
+
+/* End Introduction */
+/* Start About Me Section */
+.about-me .accounts{ 
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+}
+.about-me .accounts div{
+    padding: 20px;
+    background-color: var(--light-box);
+    color: var(--light-gery);
+    margin: 10px;
+    text-align: center;
+}
+.about-me .accounts div i{
+    margin-bottom: 10px;
+    color: var(--mainColorLight);
+    font-size: 20px;
+}
+
+/* End About Me Section */
+
+/* Start Skills */
+.skills{
+    margin-top: 200px;
+}
+.skills .title{
+    margin-bottom: 60px;
+}
+.skills .skills-item{
+    grid-gap:20px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+}
+.skills .skills-item .skill{
+    padding: 20px;
+    background-color: var(--dark-box);
+    margin: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+.skills .skills-item .skill p{
+    color: var(--light-gery);
+}
+.skills .skills-item .skill i{
+    margin-bottom: 10px;
+    color: var(--mainColorLight);
+    font-size: 40px;
+}
+/* End Skills */
+
+/* Start Services */
+.services .service-items .service{
+    text-align: center;
+    padding:20px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.services .service-items .service i{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--mainColor);
+}
+
+/* End Services */
+/* Start Projects */
+.projects .project-items{
+    grid-gap: 0;
+}
+.projects .container .project-nav{
+    background-color: var(--light-box);
+    padding: 20px; 
+    margin-bottom: 30px;
+}
+
+.projects .container .project-nav .main-botton{
+   padding: 15px 60px;
+}
+/* End Projects */
+/* Start Contact Me */
+.contactUs .container .contact{
+    grid-gap: 20px;
+    margin-top: 50px;
+}
+.contactUs .container .contact div{
+    background-color: var(--dark-box);
+    text-align: center;
+    padding: 30px;
+}
+.contactUs .container .contact div i{
+    font-size: 25px;
+    margin-bottom: 10px;
+    color: var(--mainColorLight);
+}
+.contactUs .container .hire {
+    margin-top: 100px;
+}
+.contactUs .container .hire .hire-form{
+    background-color: var(--dark-box);
+    padding: 30px 70px;
+    margin-top: 60px;
+}
+.contactUs .container .hire form input:not(:last-child),
+.contactUs .container .hire form textarea {
+    background-color: var(--dark-box);
+    padding: 25px;
+    color: #fff;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #5e5e5e;
+    display: block;
+}
+.contactUs .container .hire form input:hover,
+.contactUs .container .hire form textarea:hover{
+    border: none;
+    border-bottom: 1px solid var(--mainColor);
+}
+/* End Contact Me */

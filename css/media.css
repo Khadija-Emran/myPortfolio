@@ -1,0 +1,39 @@
+/* Small screen */
+@media (min-width: 768px){
+    .container{
+        width: 750px;
+    }
+}
+@media (max-width: 768px){
+    .header .container .links{
+        display : none;
+    }
+    .header .container .list-icon{
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: flex-end;
+    }
+    .projects .project-nav{
+        display: block;
+        text-align: center;
+    }
+    .projects .project-nav ul{
+        padding: 0;
+    }
+    .projects .project-nav .nav-item{
+        display: block;
+        margin-bottom: 25px;
+    }
+}
+/* Medium screen */
+@media (min-width: 992px){
+    .container{
+        width: 970px;
+    }
+}
+/* Larg screen */
+@media (min-width: 1200px){
+    .container{
+        width: 1170px;
+    }
+}
